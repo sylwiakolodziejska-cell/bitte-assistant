@@ -11,12 +11,12 @@ from utils import (
 
 # App configurations
 st.set_page_config(
-    page_title="Singing RAG Assistant", 
+    page_title="Singing AI Assistant", 
     page_icon=':material/chat_bubble:', # speech bubble icon 
     layout='centered')
 
 # Add a title to the app
-st.title("🎤 Singing RAG Assistant") # include a bot emoji
+st.title("🎤 Singing AI Assistant") # include a bot emoji
 
 # Add a description to the app
 st.markdown("**I am Your personal singing assistant, powered by GPT-5 and RAG technology.**")
