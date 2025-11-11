@@ -11,30 +11,35 @@ from utils import (
 
 # App configurations
 st.set_page_config(
-    page_title="Bitte RAG ChatBot", 
+    page_title="Singing RAG ChatBot", 
     page_icon=':material/chat_bubble:', # speech bubble icon 
     layout='centered')
 
 # Add a title to the app
-st.title("🤖 Bitte RAG ChatBot") # include a bot emoji
+st.title("🎤 Singing RAG ChatBot") # include a bot emoji
 
 # Add a description to the app
-st.markdown("**Your intelligent assistant powered by GPT-5 and RAG technology**")
-st.divider()
+st.markdown("**I am Your personal singing assistant, powered by GPT-5 and RAG technology.**")
+st.markdown("I help You improve technique, expand your range, maintain vocal health and perform with confidence.  \nI provide guidance on breath control, resonance, articulation, vocal exercises, stage presence and expressive song interpretation.")
 
-# add a collapsible section
-with st.expander("ℹ️ About this webapp", expanded = False):
+# Initial image
+# st.markdown("**Vocal cord structure (illustrative image)**")
+st.image("images/vocal_cords.png", width=200)
+
+# Add a collapsible section
+with st.expander("ℹ️ About this app", expanded = False):
     st.markdown(
         """
-            **Bitte RAG Chatbot**
-            - **Model:** `gpt-5` via OpenAI Responses API
+            **Singing RAG Assistant**
+            - **Model:** `gpt-5-nano` via OpenAI Responses API
             - **RAG:** File Search tool using your pre-built Vector Store
             - **Features:** multi-turn chat, image inputs, clear conversation
             - **Secrets:** reads `OPENAI_API_KEY` and `VECTOR_STORE_ID` from Streamlit secrets or environment variables
             
             **How it works**
-            Your message and (optional) images go to the Responses API along with a system resp.
-            The File Search tool retrieves relevant passages from your vector store to ground the answer.
+
+            Your message and (optional) images go to the Responses API.
+            The File Search tool retrieves relevant passages from your vector store to ground the answer.      
         """
     )
 
@@ -56,6 +61,8 @@ with st.sidebar:
         st.session_state.previous_response_id = None
         # Reset the page
         st.rerun()
+
+st.divider()
 
 # Render all previous messages
 for message in st.session_state.messages:
