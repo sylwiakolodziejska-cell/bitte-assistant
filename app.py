@@ -22,9 +22,9 @@ st.title("🎤 Singing RAG Assistant") # include a bot emoji
 st.markdown("**I am Your personal singing assistant, powered by GPT-5 and RAG technology.**")
 st.markdown("I help You improve technique, expand your range, maintain vocal health and perform with confidence.  \nI provide guidance on breath control, resonance, articulation, vocal exercises, stage presence and expressive song interpretation.")
 
-# Initial image
+# Center initial image
 col1, col2, col3 = st.columns([1, 3, 1])
-with col2: # Umieść zawartość w środkowej kolumnie
+with col2:
     st.image("images/singing_assistant_chatbot.png", width=300)
 
 # Add a collapsible section
